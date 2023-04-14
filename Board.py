@@ -1,6 +1,3 @@
-from cgi import print_environ
-
-
 class Board():
     def __init__(self):
         self.board = [["-", "-", "-"],
@@ -15,32 +12,38 @@ class Board():
     def isValidMove(self,row,col):
       return (row>=0 and col<=2) and (row>=0 and col<=2) and (self.board[row][col] == "-")
     
-    def draw(self):
-      for row in range(0,len(self.board)):
-        for col in range(0,len(self.board[0])):
-          if (self.board[row][col] == 0):
-             return True
-      return False
     
     def checkWin(self):
       l = len(self.board)
       diagnalOne = [self.board[i][i] for i in range(l)]
       diagnalTwo = [self.board[l-1-i][i] for i in range(l-1, -1, -1)]
+
+      row0 = self.board[0]
+      row1 = self.board[1]
+      row2 = self.board[2]
+
+      col0 = [symbol[0] for symbol in self.board]
+      col1 = [symbol[1] for symbol in self.board]
+      col2 = [symbol[2] for symbol in self.board]
       
       if (diagnalOne[0] != "-" and  (len(set(diagnalOne)) == 1)):
         return True
       elif (diagnalTwo[0] != "-" and len(set(diagnalTwo)) == 1):
           return True
+      elif (row0[0] != "-" and (len(set(row0)) == 1)):
+        return True
+      elif (row1[0] != "-" and (len(set(row1)) == 1)):
+        return True
+      elif (row2[0] != "-" and (len(set(row2)) == 1)):
+        return True
+      elif (col0[0] != "-" and (len(set(col0)) == 1)):
+        return True
+      elif (col1[0] != "-" and (len(set(col1)) == 1)):
+        return True
+      elif (col2[0] != "-" and (len(set(col2)) == 1)):
+        return True
       else:
-          return False
-
-        
-     
-    
-      
-      
-     
-      
+        return False
   
     def setSquare(self,row, col,value):
         self.board[row][col] = value
