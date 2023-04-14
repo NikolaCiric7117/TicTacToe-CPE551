@@ -7,6 +7,7 @@ class Board():
                       ["-", "-", "-"],
                       ["-", "-", "-"]
                       ]
+        
 
     def __str__(self):
         return f'{self.board[0][0]} {self.board[0][1]} {self.board[0][2]}\n{self.board[1][0]} {self.board[1][1]} {self.board[1][2]}\n{self.board[2][0]} {self.board[2][1]} {self.board[2][2]}'
@@ -25,8 +26,16 @@ class Board():
       l = len(self.board)
       diagnalOne = [self.board[i][i] for i in range(l)]
       diagnalTwo = [self.board[l-1-i][i] for i in range(l-1, -1, -1)]
-      if ((self.isEmpty() == False) and((len(set(diagnalOne)) == 1) or (len(set(diagnalTwo)) == 1))):
+      
+      if (diagnalOne[0] != "-" and  (len(set(diagnalOne)) == 1)):
         return True
+      elif (diagnalTwo[0] != "-" and len(set(diagnalTwo)) == 1):
+          return True
+      else:
+          return False
+
+        
+     
     
       
       
