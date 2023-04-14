@@ -1,5 +1,3 @@
-from queue import Empty
-import Board
 from Board import *
 from Player import *
 
@@ -44,8 +42,3 @@ class Game():
               print("Please enter a valid input ")
 
 
-one = Player("one", "X")
-two = Player("two", "O")
-game = Game(one, two)
-while (game.winner == False):
-    game.playGame()
