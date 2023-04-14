@@ -25,7 +25,7 @@ class Board():
       l = len(self.board)
       diagnalOne = [self.board[i][i] for i in range(l)]
       diagnalTwo = [self.board[l-1-i][i] for i in range(l-1, -1, -1)]
-      if ((len(set(diagnalOne)) == 1) or (len(set(diagnalTwo)) == 1)):
+      if ((self.isEmpty() == False) and((len(set(diagnalOne)) == 1) or (len(set(diagnalTwo)) == 1))):
         return True
     
       

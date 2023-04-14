@@ -11,20 +11,21 @@ class Game():
         self.player2 = Player("two", "O")
         self.board = Board()
         self.winner = False
-        self.player1First = True
+        self.moveCount = 1 
 
     def playGame(self):
         print(self.board, "\n")
         row = 0
         col = 0
 
-        if (self.player1First == True):
+        if (self.moveCount %2 !=0):
             row, col = map(int, input("Player one move: ").split())
             if ( self.board.isValidMove(row, col)==True):
                 self.board.setSquare(row, col, self.player1.symbol)
-                self.player1First = False
+                self.moveCount = self.moveCount +1
                 if (self.board.checkWin() == True):
                     print("Player one won!")
+                    self.winner = True
             else:
                 print("Please enter a valid input")
 
@@ -32,9 +33,10 @@ class Game():
             row, col = map(int, input("Player two move: ").split())
             if (self.board.isValidMove(row, col)):
                 self.board.setSquare(row, col, self.player2.symbol)
-                self.player1First = True
+                self.moveCount = self.moveCount + 1
                 if (self.board.checkWin() == True):
                     print("Player two won!")
+                    self.winner = True
             else :
               print("Please enter a valid input ")
 
