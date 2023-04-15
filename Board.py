@@ -11,7 +11,13 @@ class Board():
 
     def isValidMove(self,row,col):
       return (row>=0 and col<=2) and (row>=0 and col<=2) and (self.board[row][col] == "-")
-    
+      
+    def draw(self):
+      for row in range(len(self.board)):
+        for col in range(len(self.board)):
+          if(self.board[row][col] == "-"):
+            return False
+      return True
     
     def checkWin(self):
       l = len(self.board)
