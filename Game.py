@@ -9,6 +9,7 @@ class Game():
         self.player2 = Player("two", "O")
         self.board = Board()
         self.winner = False
+        self.draw = False
         self.moveCount = 1
         
 
@@ -16,6 +17,10 @@ class Game():
         print(self.board, "\n")
         row = 0
         col = 0
+        if(self.board.isEmpty() == False and self.board.draw() == True):
+          print("Draw")
+          self.winner = True
+          return
 
         if (self.moveCount %2 !=0):
             row, col = map(int, input("Player one move: ").split())
@@ -42,3 +47,4 @@ class Game():
               print("Please enter a valid input ")
 
 
+  
