@@ -19,7 +19,7 @@ class Game():
         col = 0
         if(self.board.isEmpty() == False and self.board.draw() == True):
           print("Draw")
-          self.winner = True
+          self.draw = True
           return
 
         if (self.moveCount %2 !=0):

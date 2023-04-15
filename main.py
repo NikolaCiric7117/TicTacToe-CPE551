@@ -5,7 +5,7 @@ def main():
   player2 = Player("two", "O")
 
   game = Game(player1, player2)
-  while (game.winner == False):
+  while (game.winner == False and (not game.draw)):
     game.playGame()
   
   
