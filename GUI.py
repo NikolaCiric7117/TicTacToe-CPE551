@@ -203,6 +203,7 @@ class Gui():
     self.game.winner = False
     self.game.draw = False
     self.game.moveCount = 1
+    self.restartButton["state"]= tk.DISABLED
 
     self.button1["text"] = " "
     self.button2["text"] = " "
