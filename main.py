@@ -1,5 +1,5 @@
 from GUI import *
-#main function which runs the entire Tic Tac Toe game with GUI
+#main function which runs the entire Tic Tac Toe game with GUI implementation
 def main():
 
   #initalizes root to a new TK object 
