@@ -1,5 +1,5 @@
 class Board():
-#board class that represets the tic tac toe board 
+#board class that represets the tic tac toe board using a 2d 3x3 list
 
     #board init: 3x3 list 
     def __init__(self):
