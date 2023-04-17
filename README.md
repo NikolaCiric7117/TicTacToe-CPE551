@@ -6,7 +6,7 @@ To run this tic tac toe example please make sure you have Tkinter installed on y
 pip3 install tk
 ```
 
-Next make sure you have all the files of this porject in the same directory. 
+Next make sure you have all the files of this project in the same directory. 
 To run the program type the followig into your command line:
 
 ```
