@@ -8,7 +8,7 @@ def main():
   #initlaizes gui to a new GUI object
   gui = Gui(root)
 
-  #built in TK function that infinitely loops whihc displays and runs the tic tac toe game
+  #built in TK function that infinitely loops which displays and runs the tic tac toe game
   gui.master.mainloop()
   
 #runns the main function
