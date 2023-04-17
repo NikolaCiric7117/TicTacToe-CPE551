@@ -59,6 +59,11 @@ class Board():
       if(len(my_set) == 1):
         return True
       return False
+
+    def clearBoard(self):
+      for row in range(len(self.board)):
+        for col in range(len(self.board)):
+          self.board[row][col] = "-"
     
 
 
