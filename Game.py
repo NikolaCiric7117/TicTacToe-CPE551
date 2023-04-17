@@ -1,7 +1,7 @@
 from Board import *
 from Player import *
 class Game():
-    #game class is the main driving class which will play Tic Tac Toe
+    #game class is the main driving class which will play Tic Tac Toe and find a winner
 
     def __init__(self, player1, player2):
 
