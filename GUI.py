@@ -72,90 +72,104 @@ class Gui():
 
   def buttonClick(self,x):
     if(x==1):
+      
+
       row,col = 0,0
       if(self.game.moveCount%2!=0):
         self.button1["text"] = self.game.player1.symbol
       else:
         self.button1["text"] = self.game.player2.symbol
-      self.game.playGame(row,col)
       self.game.moveCount += 1
+      self.game.playGame(row,col)
       
 
     if(x==2):
+     
       row,col = 0,1
       if (self.game.moveCount % 2 != 0):
         self.button2["text"] = self.game.player1.symbol
       else:
         self.button2["text"] = self.game.player2.symbol
-      self.game.playGame(row,col)
       self.game.moveCount += 1
+      self.game.playGame(row,col)
+      
 
     if (x == 3):
+     
       row,col = 0,2
       if (self.game.moveCount % 2 != 0):
         self.button3["text"] = self.game.player1.symbol
       else:
         self.button3["text"] = self.game.player2.symbol
-      self.game.playGame(row,col)
       self.game.moveCount += 1
+      self.game.playGame(row,col)
+      
 
     if (x == 4):
+      
       row, col = 1, 0
       if (self.game.moveCount % 2 != 0):
         self.button4["text"] = self.game.player1.symbol
       else:
         self.button4["text"] = self.game.player2.symbol
-      self.game.playGame(row, col)
       self.game.moveCount += 1
+      self.game.playGame(row, col)
+      
 
     if (x == 5):
+      
       row, col = 1, 1
       if (self.game.moveCount % 2 != 0):
         self.button5["text"] = self.game.player1.symbol
       else:
         self.button5["text"] = self.game.player2.symbol
-      self.game.playGame(row, col)
       self.game.moveCount += 1
+      self.game.playGame(row, col)
+      
 
     if (x == 6):
+      
       row, col = 1, 2
       if (self.game.moveCount % 2 != 0):
         self.button6["text"] = self.game.player1.symbol
       else:
         self.button6["text"] = self.game.player2.symbol
-      
-      self.game.playGame(row, col)
       self.game.moveCount += 1
+      self.game.playGame(row, col)
+      
 
     if (x == 7):
+    
       row, col = 2, 0
       if (self.game.moveCount % 2 != 0):
         self.button7["text"] = self.game.player1.symbol
       else:
         self.button7["text"] = self.game.player2.symbol
-      
-      self.game.playGame(row, col)
       self.game.moveCount += 1
+      self.game.playGame(row, col)
+      
 
     if (x == 8):
+   
       row, col = 2, 1
       if (self.game.moveCount % 2 != 0):
         self.button8["text"] = self.game.player1.symbol
       else:
         self.button8["text"] = self.game.player2.symbol
-      
-      self.game.playGame(row, col)
       self.game.moveCount += 1
+      self.game.playGame(row, col)
+      
 
     if (x == 9):
+      
       row, col = 2, 2
       if (self.game.moveCount % 2 != 0):
         self.button9["text"] = self.game.player1.symbol
       else:
         self.button9["text"] = self.game.player2.symbol
-      
-      self.game.playGame(row, col)
       self.game.moveCount += 1
+      self.game.playGame(row, col)
+     
     
     if(self.game.winner == True and not self.game.draw):
       self.disableButtons()

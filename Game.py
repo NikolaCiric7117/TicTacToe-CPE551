@@ -14,7 +14,9 @@ class Game():
         
 
     def playGame(self,row,col):
-        if (self.moveCount %2 !=0):
+        
+
+        if (self.moveCount %2 ==0):
             if ( self.board.isValidMove(row, col)==True):
                 self.board.setSquare(row, col, self.player1.symbol)
                 print(self.board, "\n")
@@ -35,11 +37,13 @@ class Game():
                     self.winner = True
             else :
               print("Please enter a valid input ")
-
-        if(self.board.isEmpty() == False and self.board.draw() == True):
+        if (self.board.isEmpty() == False and self.board.draw() == True and self.board.checkWin()==False):
           print("Draw")
           self.draw = True
           return
+
+
+      
 
 
 
