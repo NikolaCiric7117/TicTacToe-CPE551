@@ -1,6 +1,6 @@
 # TicTacToe-CPE551 Final project 
 
-To run this tic tac toe example please make sure you have Tkniter installed on your computer. To do so type the following into your command line:
+To run this tic tac toe example please make sure you have Tkinter installed on your computer. To do so type the following into your command line:
 
 ```
 pip3 install tk
