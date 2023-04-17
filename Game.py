@@ -13,20 +13,20 @@ class Game():
         self.moveCount = 1
         
 
-    def playGame(self):
+    def playGame(self,row,col):
         print(self.board, "\n")
-        row = 0
-        col = 0
+        #row = 0
+        #col = 0
         if(self.board.isEmpty() == False and self.board.draw() == True):
           print("Draw")
           self.draw = True
           return
 
         if (self.moveCount %2 !=0):
-            row, col = map(int, input("Player one move: ").split())
+            #row, col = map(int, input("Player one move: ").split())
             if ( self.board.isValidMove(row, col)==True):
                 self.board.setSquare(row, col, self.player1.symbol)
-                self.moveCount = self.moveCount +1
+                #self.moveCount = self.moveCount +1
                 if (self.board.checkWin() == True):
                     print(self.board)
                     print("Player one won!")
@@ -35,10 +35,10 @@ class Game():
                 print("Please enter a valid input")
 
         else:
-            row, col = map(int, input("Player two move: ").split())
+            #row, col = map(int, input("Player two move: ").split())
             if (self.board.isValidMove(row, col)):
                 self.board.setSquare(row, col, self.player2.symbol)
-                self.moveCount = self.moveCount + 1
+               # self.moveCount = self.moveCount + 1
                 if (self.board.checkWin() == True):
                     print(self.board)
                     print("Player two won!")

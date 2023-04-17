@@ -41,15 +41,15 @@ class Gui():
     self.button3.grid(row=0, column=2, padx=5, pady=5)
 
     self.button4 = tk.Button(master= self.frame1, text='', width=10, height=5,
-                    bg='white', command=lambda: buttonclick(4))
+                    bg='white', command=lambda: self.buttonclick(4))
     self.button4.grid(row=1, column=0, padx=5, pady=5)
 
     self.button5 = tk.Button(master= self.frame1, text='', width=10, height=5,
-                    bg='white', command=lambda: buttonclick(5))
+                    bg='white', command=lambda: self.buttonclick(5))
     self.button5.grid(row=1, column=1, padx=5, pady=5)
 
     self.button6 = tk.Button(master=self.frame1, text='', width=10, height=5,
-                    bg='white', command=lambda: buttonclick(6))
+                    bg='white', command=lambda: self.buttonclick(6))
     self.button6.grid(row=1, column=2, padx=5, pady=5)
 
     self.button7 = tk.Button(master=self.frame1, text='', width=10, height=5,
@@ -65,13 +65,49 @@ class Gui():
     self.button9.grid(row=2, column=2, padx=5, pady=5)
 
   def buttonclick(self,x):
-    print("hello")
+    if(x==1):
+      row,col = 0,0
+      self.button1["text"]=self.game.player1.symbol
+      self.game.playGame(row,col)
+    if(x==2):
+      row,col = 0,1
+      self.button2["text"]=self.game.player1.symbol
+      self.game.playGame(row,col)
+    if (x == 3):
+      row,col = 0,2
+      self.button3["text"] = self.game.player1.symbol
+      self.game.playGame(row,col)
+    if (x == 4):
+      row, col = 1, 0
+      self.button4["text"] = self.game.player1.symbol
+      self.game.playGame(row, col)
+    if (x == 5):
+      row, col = 1, 1
+      self.button5["text"] = self.game.player1.symbol
+      self.game.playGame(row, col)
+    if (x == 6):
+      row, col = 1, 2
+      self.button6["text"] = self.game.player1.symbol
+      self.game.playGame(row, col)
+    if (x == 7):
+      row, col = 2, 0
+      self.button7["text"] = self.game.player1.symbol
+      self.game.playGame(row, col)
+    if (x == 8):
+      row, col = 2, 1
+      self.button8["text"] = self.game.player1.symbol
+      self.game.playGame(row, col)
+    if (x == 9):
+      row, col = 2, 2
+      self.button9["text"] = self.game.player1.symbol
+      self.game.playGame(row, col)
+    
+      
+        
 
 
 
-root = tk.Tk()
-gui = Gui(root)
-gui.master.mainloop()
+
 
 
 
