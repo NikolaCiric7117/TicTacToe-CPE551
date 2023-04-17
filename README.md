@@ -7,7 +7,7 @@ pip3 install tk
 ```
 
 Next make sure you have all the files of this project in the same directory. 
-To run the program type the followig into your command line:
+To run the program type the following into your command line:
 
 ```
 python3 main.py
